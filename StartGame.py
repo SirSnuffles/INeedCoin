@@ -16,7 +16,7 @@ def main():
 	USD = Currency.Currency("United States Dollars", "USD", 0.005)
 	GBP = Currency.Currency("Great British Pounds", "GBP", 0.001)
 
-	BTC = Currency.CryptoCurrency("BitCoin", "BTC", 0.001)#LOL
+	BTC = Currency.CryptoCurrency("BitCoin", "BTC", 0.001)
 	MUC = Currency.CryptoCurrency("Made Up Coin", "MUC", 1)
 
 	print('init Alex')
@@ -28,16 +28,16 @@ def main():
 	print('init Callum')
 	Callum = Player.Player("Callum")
 
-	Alex.setUpMiner(MUC.abrv, MUC.mineRate)
-	Alex.setUpMiner(BTC.abrv, BTC.mineRate)
+	Alex.setUpMiner(MUC.abrv)
+	Alex.setUpMiner(BTC.abrv)
 	# Alex.setUpMiner(MUC.abrv, MUC.mineRate)
 
-	Will.setUpMiner(BTC.abrv, BTC.mineRate)
-	Will.setUpMiner(BTC.abrv, BTC.mineRate)
+	Will.setUpMiner(BTC.abrv)
+	Will.setUpMiner(BTC.abrv)
 	# Will.setUpMiner(GBP.abrv, GBP.printRate)
 
-	Callum.setUpMiner(BTC.abrv, BTC.mineRate)
-	Callum.setUpMiner(BTC.abrv, BTC.mineRate)
+	Callum.setUpMiner(BTC.abrv)
+	Callum.setUpMiner(BTC.abrv)
 
 
 	print("Before")
@@ -54,6 +54,9 @@ def main():
 
 		Alex.addMinerCurrency(MUC.mineRate)
 		Will.addMinerCurrency(BTC.mineRate)
+
+
+
 	print("After")
 	print(Will.wallet, Will.miners, "Will")
 	print(Alex.wallet, Alex.miners, "Alex")
