@@ -19,6 +19,9 @@ class Player(object):
 
 	def setUpMiner(self, cur):
 		# print(self.name, " added ", cur, "miner with", mineRate, "minerate")
+		if cur not in self.wallet:
+			self.wallet[cur] = 0
+
 		if cur not in self.miners:
 			self.miners[cur] = 1
 			# print(self.miners, self.wallet)

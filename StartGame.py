@@ -4,7 +4,8 @@ sys.path.append("..")
 
 #self-built modules
 from BankingSystem import Bank, ReserveBank
-from PlayerSystem import Player, Currency
+from PlayerSystem import Player
+from Market import Currency
 
 def main():
 	print('init, ReserveBank')
